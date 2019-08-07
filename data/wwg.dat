@@ -1,0 +1,24 @@
+#
+#(
+#(  Total cross sectio of ee --> WWGamma
+#(   Egamma>Ebeam, |Cos(th)_Gamma|<0.8
+#(
+#
+#TITLE 60 1.E2 DATA 'WWG'
+#CASE               '  G'
+#TITLE 20 0.7E2 DATA 'E0G1>0.1E0b1,|cosQ0G1|<0.8' SIZE 2.0
+#CASE                ' XGX     X X     GXGX     '
+#ARROW FROM 120 0.9E2 DATA TO 180 100 DATA
+#
+#SET ORDER X 2 Y
+90. 105.0
+100. 180.60
+125. 180.50
+150. 145.5
+175. 118.9
+200. 99.1
+250. 74.6
+300. 59.7
+400. 42.4
+500. 32.8
+#JOIN

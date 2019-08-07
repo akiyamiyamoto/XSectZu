@@ -1,0 +1,21 @@
+# (
+# (==================
+# ( nu nu-bar t t-bar
+# (==================
+# (  Calculated by whizard2, SM_CKM model
+# (  The process, e+e- --> n1, N1, t, T, was calculated.
+# (
+# (  All parameters are whizard2.6.3 default
+# (  mTop=173.1 GeV, mH=2000 GeV
+# ( SQRT(S) dependence
+# (==================
+# SET ORDER X Y
+450 0.011493 ; 500 0.0902641 ; 550 0.178619 ; 600 0.259485
+650 0.333033 ; 700 0.404281 ; 750 0.479716 ; 800 0.557676
+850 0.64591 ; 900 0.746147 ; 950 0.853152 ; 1000 0.972528
+1050 1.10573 ; 1100 1.24851 ;
+# JOIN
+# ARROW FROM  755. 0.3 DATA TO  720. 0.4 DATA
+# TITLE  790. 0.3 DATA 'N0e1N0e1013-24tt013-24'
+# CASE                  'GX XGX XUVV VV  UVV VV'
+#
