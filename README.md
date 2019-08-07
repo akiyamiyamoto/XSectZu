@@ -16,7 +16,7 @@ Collection of tools to create cross-section plots of ILC processes
 
 ## To run
 
-'''
+```
 gnuplot scripts/smcros.plt
 ```
 
