@@ -1,0 +1,64 @@
+# $Id: LEP_higgs.sin 2293 2010-04-11 23:57:50Z jr_reuter $
+# Simple complete physics example: Higgs search at LEP
+########################################################################
+#
+# Copyright (C) 1999-2015 by 
+#     Wolfgang Kilian <kilian@physik.uni-siegen.de>
+#     Thorsten Ohl <ohl@physik.uni-wuerzburg.de>
+#     Juergen Reuter <juergen.reuter@desy.de>
+#     with contributions from
+#     Christian Speckner <cnspeckn@googlemail.com>
+#
+# WHIZARD is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by 
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# WHIZARD is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+########################################################################
+
+# model = SM
+# model = SM_Higgs
+model = SM_CKM
+
+# The Higgsstrahlung process
+# process e2e2h = e1, E1 => e2, E2, h
+
+process ttz = e1, E1 => t, T, Z
+
+# polarized e1, E1, e2, E2, e3, E3, "W+", "W-", Z
+
+compile
+
+# Set the input parameters
+mH = 125 GeV
+wH = 4.3 MeV
+
+# ##################################################################################
+# Parameters for Pythia hadronization
+# ?ps_isr_active = true 
+# Do we need to set ps_isr_active = true, when isr is set by beams command
+
+sqrts = 250 GeV
+
+beams = e1, E1 
+
+scan sqrts = ( 438 => 600 /+1 ) { 
+    integrate( ttz ) 
+#     integrate( ZH ) { iterations = 1:100000, 10:100000 }
+    show( sqrts, results )
+}
+
+scan sqrts = ( 600 => 1100 /+5 ) { 
+  integrate( ttz )
+  show( sqrts, results )
+}
+
